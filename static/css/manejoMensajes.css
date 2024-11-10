@@ -1,0 +1,52 @@
+/* MODO OSCURO */
+
+/* Contenedor general para los mensajes */
+.message-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    max-width: 70%;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 16px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mensajes del usuario (TU) alineados a la izquierda */
+.user-message {
+    align-self: flex-start;
+    background-color: #4e4e4e; /* Color de fondo para el usuario */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 15px;
+    color: #ffffff;
+}
+
+/* Mensajes del bot (IA) alineados a la derecha */
+.bot-message {
+    align-self: flex-end;
+    background-color: #2b2b2b; /* Color de fondo para la IA */
+    border-top-right-radius: 5px;
+    border-top-left-radius: 15px;
+    color: #ffffff;
+}
+
+/* Estilo del nombre del emisor (arriba del mensaje) */
+.name {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #cccccc; /* Color más tenue para el nombre */
+}
+
+/* Estilo del texto dentro de los mensajes */
+.message {
+    margin: 0;
+    color: #f5f5f5; /* Color del texto */
+    line-height: 1.5;
+}
+
+strong {
+    font-weight: bold;
+    color: #ffffff;
+}

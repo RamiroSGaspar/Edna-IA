@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdnaIa</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/Logo2.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize1.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos1.css') }}">
+
+</head>
+<body>
+    
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">EdnaIA</h2>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="#inicio" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#soluciones" class="nav__links">Soluciones</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#como-funciona" class="nav__links">¿Como funciona?</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#proposito" class="nav__links">Proposito</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#sobre-nosotros" class="nav__links">Sobre Nosotros</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#preguntas-frecuentes" class="nav__links">Preguntas Frecuentes</a>
+                </li>
+                
+                <img src="{{ url_for('static', filename='img/close.svg') }}" class="nav__close">
+            </ul>
+
+
+            <div class="nav__menu">
+                <img src="{{ url_for('static', filename='img/menu.svg') }}" class="nav__img">
+            </div>
+
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title" id="inicio">Desata tu genio creativo con la ayuda de Edna.IA</h1>
+            <p class="hero__paragraph">¡Bienvenidos a Edna.IA! 
+            Descubre cómo nuestra inteligencia artificial puede ayudarte a  potenciar tus habilidades y llevarte al siguiente nivel en tu viaje creativo. 
+            ¡Comienza a escribir como nunca antes!</p>
+            <a href="#" class="cta" id="iniciar-sesion">Iniciar sesión para comenzar</a>
+            <p class="hero__paragraph">Descubre quién está detras de este chat de inteligencia artificial y cómo puedo ayudarte.</p>
+        </section>
+
+
+    </header>
+
+    <main>
+        <section class="container about">
+            <h2 class="subtitle" id="soluciones">Funciones Disponibles</h2>
+            <p class="about__paragraph">Como Edna.IA, estoy aqui para ofrecerte una variedad de soluciones y beneficios que pueden transformar tu experiencia como escritor.</p>
+        
+            <div class="about__main">
+                <article class="about__icons">
+                    <img src="./img/lapiz.svg" class="about__icon">
+                    <h3 class="about__title">Generación de ideas creativas</h3>
+                    <p class="about__paragrah">Te proporciono una fuente infinita de ideas creativas y sugerencias que pueden inspirarte y enriquecer tus historias.</p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./img/idea.svg" class="about__icon">
+                    <h3 class="about__title">Optimización de la creatividad</h3>
+                    <p class="about__paragrah">Te ayudo a desbloquear tu creatividad y a superar bloqueos mentales al ofrecerte nuevas perspectivas y enfoques para tus escritos.</p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./img/apcontinuo.svg" class="about__icon">
+                    <h3 class="about__title">Aprendizaje continuo</h3>
+                    <p class="about__paragrah">A medida que interactúas conmigo, tienes la oportunidad de aprender sobre técnicas de escritura, estructuras narrativas y otros aspectos del oficio de escribir.</p>
+                </article>
+
+                <article class="about__icons">
+                    <img src="./img/calidad.svg" class="about__icon">
+                    <h3 class="about__title">Potenciar la escritura</h3>
+                    <p class="about__paragrah">Mis sugerencias y consejos están diseñados para elevar la calidad de tus escritos, ayudándote a crear gistorias más sólidas y convincentes.</p>
+                </article>
+            </div>
+        </section>
+
+
+        <section class="knowledge">
+            <div class="knowledge__container container">
+                <div class="knowledege__texts">
+                    <h2 class="Subtitle" id="como-funciona">¿Cómo funciona Edna.IA?</h2>
+                    <p class="knowledge__paragraph"> 
+                    <ul>
+                        <li>El escritor ingresa una sugerencia, consejo o idea en el chatbot.</li>
+                        <li>Edna.IA recibe la entrada del usuario y la analiza utilizando técnicas de procesamiento del lenguaje
+                        natural (NLP) para comprender el significado y la intención dentrás de la sugerencia.
+                        </li>
+                        <li>Basándose en la sugerencia inicial del escritor, Edna.IA utiliza modelos de inteligencia artificial para generar nuevas ideas, sugerencias o conceptos relacionados con la entrada original. 
+                        Esto puede incluir la creación de personajes, tramas, escenarios, conflictos o giros argumentales que enriquezcan la historia.</li>
+                        <li>Edna.IA evalúa las ideas generadas para garantizar su coherencia y relevancia con la sugerencia original.</li>
+                        <li>El escritor revisa las ideas generadas por Edna.IA y puede seleccionar aquellas que encuentre más inspiradoras o útiles.</li>
+                        <li>Si es necesario, el escritor puede proporcionar retroalimentación adicional o solicitar más sugerencias para refinar aún más la historia.</li>
+                        <li>Con las ideas seleccionadas, el escritor procede a desarrollar la historia, utilizando las sugerencias proporcionadas por Edna.IA como punto de partida.</li>
+                    </ul></p>
+                    
+                    <!-- Botón de Ver Más -->
+                    <a href="https://www.youtube.com/watch?v=ctC2tS6P5JE&t=1s" target="_blank" class="cta">Ver más</a>
+                </div>
+
+                <!--Que sea un video o gif-->
+                <figure class="knowledge__picture">
+                    <img src="./img/Bugcat.gif" class="knowledge__ing" alt="Función de Edna.IA">
+                </figure>
+
+            </div>
+        </section>
+
+        <section class="price container">
+            <h2 class="subtitle" id="proposito">¿Cual es mi proposito?</h2>
+        
+            <!--QUIEN SOY-->
+            <div class="price__table">
+                <div class="price__element">
+                    <p class="price__name">Proposito</p>
+                    <h3 class="price__price">¿Quién soy?</h3>
+                
+                    <div class="price__items">
+                        <p class="price__features">Soy Edna.IA, tu compañera digital en el mundo de la escritura y la literatura.</p>
+                        <p class="price__features">Ayudo a potenciar tu creatividad y metas de escritor.</p>
+                        <p class="price__features">Ofrezco sugerencias, corrijo errores y fomento la imaginación.</p>
+                    </div>
+                
+                </div>
+
+                <!-- CURIOSIDADES -->
+                <div class="price__element price__element--best">
+                    <p class="price__name">Curiosidades</p>
+                    <h3 class="price__price">¿Edna.IA?¿Por qué?</h3>
+                
+                    <div class="price__items">
+                        <p class="price__features">El nombre "Edna", de origen gaélico, significa "gozo" o "placer". 
+                        Ha sido usado globalmente y en literatura, destaca como el nombre de la protagonista de "El despertar" de Kate Chopin, una obra emblemática sobre emancipación femenina. 
+                        Lo elegimos para nuestra IA porque deseamos que sea exitosa y brinde una experiencia placentera a los usuarios, haciendo también una alusión al personaje de los Simpson, Edna.</p>
+                    </div>
+                
+                    <a href="#" class="price__cta" id="btn-start-chat">Comenzar ahora</a>
+                    
+                </div>
+
+                <!--PARA QUE ME CREARON-->
+                <div class="price__element">
+                    <p class="price__name">Proposito</p>
+                    <h3 class="price__price">¿Para que me crearon?</h3>
+                
+                    <div class="price__items">
+                        <p class="price__features">Me crearon para mejorar tus habilidades como escritor y poder sacar tu mayor potencial.</p>
+                        <p class="price__features">Proporciono sugerencias, correcciones y apoyo.</p>
+                        <p class="price__features">Ayudo a alcanzar nuevas alturas en tu viaje creativo.</p>
+                    </div>
+            
+                </div>
+
+            </div>
+        </section>
+
+        <section class="testimony">
+            <div class="testimony__container container">
+                <img src="./img/leftarrow.svg" class="testimony__arrow" id="before">
+
+                <!--TESTIMONIO 1-->
+                <section class="testimony__body testimony__body--show" data-id="1">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle" id="sobre-nosotros">Escuela de Educación Tecnica N° 3139<span class="testimony__course">"Gral. M. Miguel de GÜEMES"</span></h2>
+                        <p class="testimony__review"> Somos un equipo de estudiantes de la institución E.E.T. N° 3139 "Gral M.M. de Güemes" que se dedicó a la realización del proyecto Edna.IA, 
+                        un chatbot diseñado específicamente para escritores y usuarios que necesiten un impulso creativo, ya sea que estén comenzando en el mundo de la redacción o la literatura o que cuenten con experiencia previa. </p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./img/Esc_Tecnica.jpg" class="testimony__img"> 
+                </section>
+
+                <!--TESTIMONIO 2-->
+                <section class="testimony__body" data-id="2">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Clarita Anabella, Zolorza Choque <span class="testimony__course">estudiante y desarrolladora del proyecto.</span></h2>
+                        <p class="testimony__review">Soy una joven de 18 años con una pasión por la programación y la tecnología, desde la inteligencia artificial hasta la realidad aumentada. Como profesional de la informática con un título técnico, mi objetivo profesional es encontrar una posición en la que pueda utilizar mis habilidades técnicas y conocimientos para contribuir al éxito de una empresa u organización, 
+                        ayudando a la eficiencia y productividad a través de soluciones tecnológicas innovadoras. Por lo que,
+                        me considero una aprendiz eterna, en busca de nuevos desafíos y conocimientos. 
+                        <em>La programación no es solo mi habilidad, es mi forma de expresión.</em> 
+                        </p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./img/Foto1.png" class="testimony__img"> 
+                    </figure>
+                </section>
+                
+                
+                <!--TESTIMONIO 3-->
+                <section class="testimony__body" data-id="3">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Ramiro Sebastian, Gaspar<span class="testimony__course">estudiante y desarrollador del proyecto.</span></h2>
+                        <p class="testimony__review"> Soy un perfil de informático muy simple, donde en lo que mas me especializo es en el manejo de los datos y en el algoritmo para los programas, códigos, sistemas , etc. 
+                        Donde yo se aplicar la lógica de programación en lenguajes de programación como C++, Pascal, Python y Java,  y sobre los entornos para manejar los datos puedo utilizar Base de datos SQL y NoSQL.
+                        Hasta ahora no tengo un repertorio tan grandes de proyectos pero en los pocos que tengo puedo demostrar lo que menciono,
+                        y en los nuevos proyectos que voy a seguir demostrando lo dicho y adaptándome al lugar o trabajo que se me asignen a realizar.</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./img/2075212.jpg" class="testimony__img"> 
+                    </figure>
+                </section>
+
+                <!--TESTIMONIO 4-->
+                <section class="testimony__body" data-id="4">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Fernanda Busch<span class="testimony__course">Docente titular.</span></h2>
+                        <p class="testimony__review"> Profesora a cargo de la materia de Prácticas Profesionalizantes y Proyecto Final en la institución de cuarto año en la orientación en informática. 
+                        Su labor implica guiar a los estudiantes en la aplicación práctica de los conocimientos adquiridos durante su formación, preparándolos para su inserción en el ámbito laboral. 
+                        </p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./img/2075212.jpg" class="testimony__img">  
+                    </figure>
+                </section>
+
+                <img src="./img/rightarrow.svg" class="testimony__arrow" id="next">
+            </div>
+
+        </section>
+
+
+        <section class="questions container">
+            
+            <h2 class="subtitle" id="preguntas-frecuentes">Preguntas frecuentes</h2>
+            <p class="questions__paragraph"> ¡Bienvenido a nuestra sección de preguntas frecuentes! Estamos aquí para ayudarte a resolver cualquier duda que puedas tener y responder todas esas preguntas que puedan surgirte. 
+            Nuestra misión es asegurarnos de que encuentres la información que necesitas de manera clara y concisa.</p>
+
+            <section class="questions__container">
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Edna.IA aprende de mis preferencias de escritura?
+                            <span class="questions__arrow">
+                                <img src="./img/arrow.svg" class="questions__img">
+                            </span>
+                        </h3> 
+                           
+                        <p class="questions__show"> Sí, puede aprender de tus preferencias de escritura y adaptar tus sugerencias en consecuencia con el tiempo. 
+                        Edna.IA utiliza algoritmos de inteligencia artificial para analizar las ideas que el usuario proponga y así sugerir elementos claves como personajes, tramas y diálogos para ayudarte en el proceso de escritura. </p>
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿El chatbot puede ayudarme a estructurar mi historia?
+                            <span class="questions__arrow">
+                                <img src="./img/arrow.svg" class="questions__img">
+                            </span>
+                        </h3> 
+                           
+                        <p class="questions__show"> Absolutamente, Edna.IA  puede proporcionarte recomendaciones sobre la estructura narrativa, como el inicio, nudo y desenlace de tu historia.</p>
+                    </div>
+                </article>
+
+                <article class="questions__padding">
+                    <div class="questions__answer">
+                        <h3 class="questions__title">¿Hay algún límite en cuanto al género de las historias que puedo desarrollar con la ayuda del Edna.IA?
+                            <span class="questions__arrow">
+                                <img src="./img/arrow.svg" class="questions__img">
+                            </span>
+                        </h3> 
+                           
+                        <p class="questions__show">No, Edna.IA puede ayudarte a desarrollar historias en una amplia variedad de géneros, desde fantasía y ciencia ficción hasta romance y misterio, dependiendo de las preferencias de cada usuario.</p>
+                    </div>
+
+                </article>
+            </section>
+
+            <section class="questions__offer">
+                <h2 class="subtitle">¿Estás listo para emprender tu viaje creativo en el mundo de la escritura?</h2>
+                <p class="questions__copy"> Si estás buscando dar los primeros pasos o necesitas un pequeño empujón para comenzar a escribir tu historia, ¡no dudes en probar Edna.IA! 
+                Está aquí para ayudarte a desbloquear tu potencial creativo y guiarte en cada paso del proceso de creación literaria.</p>
+                <a href="#" class="cta" id="btn-start-chat-2">Comenzar chat</a>
+            </section>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="footer__container container">
+            <nav class="nav nav--footer">
+                <h2 class="footer__title">EdnaIA</h2>
+
+                <ul class="nav__link nav__link--footer">
+                    <li class="nav__items">
+                        <a href="#inicio" class="nav__links">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#soluciones" class="nav__links">Soluciones</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#como-funciona" class="nav__links">¿Como funciona?</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#proposito" class="nav__links">Proposito</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#sobre-nosotros" class="nav__links">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#preguntas-frecuentes" class="nav__links">Preguntas Frecuentes</a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <form id="footerForm" class="footer__form" method="POST">
+                <h2 class="footer__newsletter">Suscríbete a EdnaIA</h2>
+                <div class="footer__inputs">
+                  <input type="submit" id="registroBtn" value="Regístrate" class="footer__submit">
+                </div>
+              </form>              
+
+        </section>
+
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="https://www.facebook.com/tecnica3139salta?mibextid=ZbWKwL" target="_blank" class="footer__icons"><img src="./img/facebook.svg" class="footer__img"></a>
+                <a href="https://github.com/ClaritaZolorza/Proyecto-EdnaIA" target="_blank" class="footer__icons"><img src="./img/icons8-github-30.png" class="footer__img"></a>
+            
+            </div> 
+            <h3 class="footer__copyright">Derechos reservados &copy; Clarita Zolorza & Sebastian Gaspar</h3>    
+        </section>
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='js/slider.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/questions.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/cambioInicioSesion.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/cambioChat.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/cambioInicioSesion2.js') }}"></script>
+    
+    
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          document.getElementById('footerForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+            const email = document.querySelector('.footer__input').value;
+            const url = new URL('inicioSesion.html', window.location.origin);
+            url.searchParams.set('email', email);
+            window.open(url.toString(), '_blank'); // Abre una nueva pestaña
+          });
+        });
+      </script>
+      
+
+</body>
+</html>

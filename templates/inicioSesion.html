@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdnaIA | Registro</title>
+    
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/Logo2.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleInicioSesion.css') }}">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="container-form">
+            <form class="sign-in" method="POST">
+                <h2>Iniciar Sesión</h2>
+                <span>Use su correo y contraseña</span>
+                <div class="container-input">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="text" id="emailInput" name="emailInput" placeholder="Email" required>
+                </div>
+                <div class="container-input">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                </div>
+
+                <a href="#" onclick="document.getElementById('password-reset-modal').style.display='block'">¿Olvidaste tu contraseña?</a>
+
+                <button class="button" type="submit">INICIAR SESIÓN</button>
+            </form>
+        </div>
+        <div class="container-form">
+            <form class="sign-up" method="POST" action="{{ url_for('registrar') }}">
+                <h2>Registrarse</h2>
+                <span>Use su correo electrónico para registrarse</span>
+                <div class="container-input">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" name="nombre_usuario" placeholder="Nombre" required>
+                </div>
+                <div class="container-input">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="text" name="email" placeholder="Email" required>
+                </div>
+                <div class="container-input">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                </div>
+                <button class="button" type="submit">REGISTRARSE</button>
+            </form>
+        </div>
+
+        <div class="container-welcome">
+            <div class="welcome-sign-up welcome">
+                <h3>¡Bienvenido!</h3>
+                <p>Ingrese sus datos personales para usar todas las funciones del sitio</p>
+                <button class="button" id="btn-sign-up">Registrarse</button>
+            </div>
+            <div class="welcome-sign-in welcome">
+                <h3>¡Hola!</h3>
+                <p>Regístrese con sus datos personales para usar todas las funciones de nuestro sitio</p>
+                <button class="button" id="btn-sign-in">Iniciar Sesión</button>
+            </div>
+        </div>
+
+        <a href="{{ url_for('inicio') }}" class="back-arrow">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+        </a>
+        
+
+        <!-- Modal de recuperación de contraseña -->
+        <div id="password-reset-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="document.getElementById('password-reset-modal').style.display='none'">&times;</span>
+                <h3>Recuperar Contraseña</h3>
+                <p>Ingresa tu correo electrónico para recibir un enlace de recuperación.</p>
+                <form action="{{ url_for('solicitar_recuperacion') }}" method="POST">
+                    <input type="email" name="email" placeholder="Ingresa tu correo" required>
+                    <button type="submit">Recuperar Contraseña</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Mensajes flash -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scriptInicioSesion.js') }}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const email = urlParams.get('email');
+            if (email) {
+                document.getElementById('emailInput').value = email; // Ajusta el selector según el id o clase del input
+            }
+        });
+
+        // Script para cerrar el modal al hacer clic fuera de él
+        window.onclick = function(event) {
+            const modal = document.getElementById('password-reset-modal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+
+    <style>
+        /* Estilos básicos para el modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    
+</body>
+</html>
