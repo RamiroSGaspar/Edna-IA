@@ -9,7 +9,7 @@ import ollama
 app = Flask(__name__, static_url_path='', static_folder='static')
 
 # Config para la conexion con mysql, esta seccion requiere darle permisos al usario root para el servidor Falsk
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:4250473@localhost:3306/sesiones'
+app.config['SQLALCHEMY_DATABASE_URI'] = ''
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'mi_secreto'  # Necesario para los mensajes flash
 db = SQLAlchemy(app)
