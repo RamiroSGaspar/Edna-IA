@@ -1,4 +1,4 @@
-#!/home/sebian/Edna-IA/.venv/bin/python
+#!/home/sebas/Edna-IA/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
